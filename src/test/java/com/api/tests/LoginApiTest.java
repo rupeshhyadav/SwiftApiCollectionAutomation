@@ -16,7 +16,7 @@ public class LoginApiTest {
 
 	@Test(description = "to verify the login api", groups = { "regression", "smoke" })
 	public void loginApiTest() {
-		RestAssured.given().spec(SpecUtil.requestSpec()).body(login)
+		RestAssured.given().spec(SpecUtil.requestSpec(login))
 		.when().post("api/auth/login")
 		.then().spec(SpecUtil.responseSpec())
 		.and()

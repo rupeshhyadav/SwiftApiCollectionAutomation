@@ -12,10 +12,19 @@ import io.restassured.specification.ResponseSpecification;
 
 public class SpecUtil {
 
+	public static RequestSpecification requestSpec(Object payload) {
+		RequestSpecification request = new RequestSpecBuilder()
+				.setBaseUri(PropertiesUtil.readFromProperties("BASE_URI")).setContentType(ContentType.JSON)
+				.setAccept(ContentType.JSON).log(LogDetail.ALL).setBody(payload).build();
+		return request;
+
+	}
+
 	public static RequestSpecification requestSpec() {
 		RequestSpecification request = new RequestSpecBuilder()
 				.setBaseUri(PropertiesUtil.readFromProperties("BASE_URI")).setContentType(ContentType.JSON)
-				.setAccept(ContentType.JSON).log(LogDetail.ALL).build();
+				.setAccept(ContentType.JSON).log(LogDetail.ALL).addHeader("Authorization", GetAuthToken.getToken())
+				.build();
 		return request;
 
 	}
