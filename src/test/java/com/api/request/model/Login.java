@@ -20,6 +20,11 @@ public class Login {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	@Override
+	public String toString() {
+		return "Login [username=" + username + ", password=" + password + "]";
+	}
+	
 	
 	
 
