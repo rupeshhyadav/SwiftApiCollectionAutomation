@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome8",
+    "definitions": {
+        "Welcome8": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "transactionReference": {
+                    "type": "string"
+                },
+                "sourceAccount": {
+                    "type": "string"
+                },
+                "targetAccount": {
+                    "type": "null"
+                },
+                "amount": {
+                    "type": "integer"
+                },
+                "balanceAfterTransaction": {
+                    "type": "number"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "transactionDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "amount",
+                "balanceAfterTransaction",
+                "description",
+                "id",
+                "sourceAccount",
+                "status",
+                "targetAccount",
+                "transactionDate",
+                "transactionReference",
+                "type"
+            ],
+            "title": "Welcome8"
+        }
+    }
+}

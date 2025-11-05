@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome8Element"
+    },
+    "definitions": {
+        "Welcome8Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "accountNumber": {
+                    "type": "string"
+                },
+                "accountType": {
+                    "type": "string"
+                },
+                "balance": {
+                    "type": "number"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "branch": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "ownerName": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "accountNumber",
+                "accountType",
+                "balance",
+                "branch",
+                "createdAt",
+                "ownerName",
+                "status"
+            ],
+            "title": "Welcome8Element"
+        }
+    }
+}
